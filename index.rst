@@ -12,7 +12,5 @@ Please send any feedback to `@ericholscher <https://twitter.com/ericholscher>`_
   :maxdepth: 2
 
   part-1
-  crawler/docs/step1/index
   part-2
-  crawler/docs/step2/index
   
