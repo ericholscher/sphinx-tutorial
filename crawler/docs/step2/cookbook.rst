@@ -8,7 +8,7 @@ Crawl a web page
 The most simple way to use our program is with no arguments.
 Simply run::
 
-	crawler <url>
+	python main.py -u <url>
 
 to crawl a webpage.
 
@@ -18,7 +18,7 @@ Crawl a page slowly
 To add a delay to your crawler,
 use :option:`-d`::
 
-	crawler -d 10 <url>
+	python main.py -d 10 -u <url>
 
 This will wait 10 seconds between page fetches.
 
@@ -28,6 +28,6 @@ Crawl only your blog
 You will want to use the :option:`-i` flag,
 which while ignore URLs matching the passed regex::
 
-	crawler -i "^blog" <url>
+	python main.py -i "^blog" -u <url>
 
 This will only crawl pages that contain your blog URL.

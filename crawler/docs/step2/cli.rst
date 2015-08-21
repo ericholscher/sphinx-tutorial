@@ -11,12 +11,6 @@ These flags allow you to change the behavior of :program:`Crawler`.
 
     Default: 1 second
     
-.. option:: -c <int>, --concurrency <int>
-
-	Use multiple system processes to crawl a website.
-
-    Default: 1
-    
 .. option:: -i <regex>, --ignore <regex>
 
 	Ignore pages that match a specific pattern.
