@@ -31,9 +31,8 @@ add the following:
    :language: rst
    :linenos:
 
-.. 
-	.. note::
-		Live Preview: :doc:`crawler/docs/step2/cli`
+.. note::
+	Live Preview: :doc:`crawler/docs/step2/cli`
 
 Here you are documenting the actual options your code takes.
 
