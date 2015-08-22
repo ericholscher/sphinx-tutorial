@@ -1,14 +1,15 @@
-import re
 import time
 from optparse import OptionParser
-
+# Python 3 compat
 try:
     from urlparse import urlparse
-except:
+except ImportError:
     from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
+
+from .utils import log, should_ignore
 
 
 class Crawler(object):
@@ -38,21 +39,8 @@ class Crawler(object):
         :param url: The fully qualified URL to retrieve
         """
         response = requests.get(url)
-        print("({status}) {url} ".format(url=url, status=response.status_code))
+        log(url, response.status_code)
         return response.content
-
-    def should_ignore(self, url):
-        """
-        Returns True if the URL should be ignored
-
-        :param url: The fully qualified URL to compare again
-        """
-
-        for pattern in self.ignore:
-            compiled = re.compile(pattern)
-            if compiled.search(url):
-                return True
-        return False
 
     def crawl(self):
         """
@@ -69,13 +57,14 @@ class Crawler(object):
                 to_get = link
             else:
                 to_get = self.url + link
-            if self.should_ignore(to_get):
+            if should_ignore(self.ignore, to_get):
+                print('Ignoring URL: {url}'.format(url=to_get))
                 continue
             self.get(to_get)
             time.sleep(self.delay)
 
 
-if __name__ == '__main__':
+def run_main():
     parser = OptionParser()
     parser.add_option("-u", "--url", dest="url", default="http://docs.readthedocs.org/en/latest/",
                       help="URL to fetch")
@@ -88,3 +77,6 @@ if __name__ == '__main__':
 
     c = Crawler(url=options.url, delay=options.delay, ignore=options.ignore)
     c.crawl()
+
+if __name__ == '__main__':
+    run_main()
