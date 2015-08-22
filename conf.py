@@ -14,17 +14,14 @@
 import sys, os
 
 
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-
-if not on_rtd:  # only import and set the theme if we're building docs locally
-    import sphinx_rtd_theme
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+import sphinx_rtd_theme
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('./crawler/src'))
+sys.path.insert(0, os.path.abspath('crawler/src'))
 
 # -- General configuration -----------------------------------------------------
 
@@ -33,7 +30,7 @@ sys.path.insert(0, os.path.abspath('./crawler/src'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.intersphinx', 'sphinx.ext.autodoc']
+extensions = ['sphinx.ext.intersphinx', 'sphinx.ext.autodoc', 'sphinx.ext.doctest']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -185,9 +182,15 @@ latex_elements = {
 
 # The font size ('10pt', '11pt' or '12pt').
 #'pointsize': '10pt',
+'pointsize': '12pt',
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
+
+# Eliminate blank pages per http://stackoverflow.com/questions/5422997/
+'babel' : r'\usepackage[english]{babel}',
+'classoptions': ',openany,oneside',
+'fncychap': r'\usepackage[Lenny]{fncychap}',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -237,8 +240,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'TheRestructuredTextBook', u'The RestructuredText Book Documentation',
-   u'Daniel Greenfeld, Eric Holscher', 'TheRestructuredTextBook', 'One line description of project.',
+  ('index', 'Sphinx Tutorial', u'Sphinx Tutorial',
+   u'Eric Holscher', 'SphinxTutorial', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -319,4 +322,5 @@ intersphinx_mapping = {'http://docs.python.org/': None}
 rst_epilog = """
 .. _Sphinx: http://sphinx-doc.org/
 .. _reStructuredText: http://sphinx-doc.org/rest.html
+.. _Read the Docs: https://readthedocs.org
 """
