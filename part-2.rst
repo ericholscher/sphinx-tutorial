@@ -90,7 +90,6 @@ Update your ``index.rst`` to look like:
    :language: rst
    :linenos:
 
-
 Now you have a beautiful documentation reference that is coming directly from your code.
 This means that every time you change your code,
 it will automatically be reflected in your documentation.

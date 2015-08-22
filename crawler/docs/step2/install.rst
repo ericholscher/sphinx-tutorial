@@ -6,9 +6,8 @@ At the command line::
 
     easy_install crawler
 
-Or, if you have virtualenvwrapper installed:
+Or, if you have pip installed:
 
 .. code-block:: bash
 
-    mkvirtualenv crawler
     pip install crawler

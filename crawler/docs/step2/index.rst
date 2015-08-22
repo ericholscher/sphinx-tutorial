@@ -1,5 +1,5 @@
-Welcome to Crawler's documentation!
-===================================
+Crawler Step 2 Documentation
+============================
 
 Getting started with Crawler is easy.
 The main class you need to care about is :class:`~main.Crawler`

@@ -44,24 +44,37 @@ Now you are ready to creating documentation.
 Create a directory called ``crawler``.
 Inside that directory you should create a ``docs`` directory,
 and move into it::
-	
-	mkdir crawler
-	cd crawler
-	mkdir docs
-	cd docs
+  
+    mkdir crawler
+    cd crawler
+    mkdir docs
+    cd docs
 
 Then you can create the Sphinx project skeleton in this directory::
 
-  sphinx-quickstart
+    sphinx-quickstart
 
-accepting all the defaults, calling the project ``Crawler``, and giving it a `1.0` version.
+Have the *Project name* be ``Crawler``, 
+put in your own *Author name*,
+and put in 1.0 be the *Project version*.
+Otherwise you can accept the default options.
+
+My output looks like this:
+
+.. literalinclude:: quickstart-output.txt
+   :language: text
+
 Your file system should now look similar to this::
 
-    crawler/
-        docs/
-            conf.py
-            index.rst
-            Makefile
+    crawler
+    └── docs
+        ├── index.rst
+        ├── conf.py
+        ├── Makefile
+        └── make.bat
+        ├── _build
+        ├── _static
+        ├── _templates
 
 We have a top-level ``docs`` directory in the main project directory.
 Inside of this is:
@@ -71,19 +84,23 @@ Inside of this is:
     It normally contains a *Table of Contents* that will link to all other
     pages of the documentation.
 
-``conf.py``: which allows for customization of Sphinx.
-	You won't need to use this too much yet,
-	but it's good to be familiar with this file.
+``conf.py``: 
+    Allows for customization of Sphinx.
+    You won't need to use this too much yet,
+    but it's good to be familiar with this file.
 
-``Makefile``: This ships with Sphinx,
-    and is the main interface for local development,
+``Makefile`` & ``make.bat``: 
+    This is the main interface for local development,
     and shouldn't be changed.
 
-``_build``:  The directory that your output files go into.
+``_build``:  
+    The directory that your output files go into.
 
-``_static``: The directory to include all your static files, like images.
+``_static``: 
+    The directory to include all your static files, like images.
 
-``_templates``: Allows you to override Sphinx templates to customze look and feel.
+``_templates``: 
+    Allows you to override Sphinx templates to customze look and feel.
 
 Building docs
 -------------
@@ -101,10 +118,18 @@ You can now open them in your browser by typing::
 
     open _build/html/index.html
 
+You can also view it by running a web server in that directory::
+
+    # Inside docs/_build/html directory.
+    python -m SimpleHTTPServer
+
+Then open your browser to http://localhost:8000.
+
 This should display a rendered HTML page that says **Welcome to Crawler’s documentation!** at the top.
 
 ``make html`` is the main way you will build HTML documentation locally.
-It is simply a wrapper around a more complex call to Sphinx.
+It is simply a wrapper around a more complex call to Sphinx,
+which you can see as the first line of output.
 
 Documenting a Project
 *********************
@@ -122,7 +147,7 @@ we'll have the following pages:
 * Installation
 * Cookbook/Examples
 * Command Line Options
-* Changelog
+* API
 
 Let's start with the Support page.
 
@@ -137,10 +162,9 @@ Go ahead and put this markup in your ``support.rst``:
 
 .. literalinclude:: crawler/docs/step1/support.rst
    :language: rst
-   :linenos:
 
 .. index::
-	pair: Syntax; Hyperlink
+  pair: Syntax; Hyperlink
 
 Hyperlink Syntax
 ~~~~~~~~~~~~~~~~
@@ -171,7 +195,7 @@ Include the following in your ``install.rst``:
    :linenos:
 
 .. index::
-	pair: Syntax; Code Example
+  pair: Syntax; Code Example
 
 Code Example Syntax
 ~~~~~~~~~~~~~~~~~~~
@@ -189,7 +213,7 @@ Blocks of content are structured based on the indention level they are on.
 You can see this concept with our ``code-block`` directive above.
 
 .. index::
-	pair: Syntax; TOC Tree
+  pair: Syntax; TOC Tree
 
 Table of Contents Tree (toctree)
 --------------------------------
@@ -199,11 +223,11 @@ One of the main concepts in Sphinx is that it allows multiple pages to be combin
 The ``toctree`` directive is a fundamental part of this structure.
 A simple ``toctree`` directive looks like this::
 
-	.. toctree::
-	   :maxdepth: 2
+  .. toctree::
+     :maxdepth: 2
 
-	   install
-	   support
+     install
+     support
 
 This will then output a Table of Contents in the page where this occurs.
 It will output the top-level headers of the pages as listed.
@@ -217,7 +241,7 @@ Build Docs Again
 Now that you have a few pages of content,
 go ahead and build your docs again::
 
-	make html
+  make html
 
 If you open up your ``index.html``,
 you should see the basic structure of your docs from the included ``toctree`` directive.
@@ -234,12 +258,12 @@ All of those formats share the same base format though,
 so you only have to change things in one place.
 So you can generate a manpage for your docs::
 
-	make man
+  make man
 
 This will place a manpage in ``_build/man``.
 You can then view it with::
 
-	man _build/man/crawler.1
+  man _build/man/crawler.1
 
 Create a single page document
 -----------------------------
@@ -250,7 +274,7 @@ This is another area where Sphinx shines.
 You can write your documentation in multiple files to make editing and updating easier.
 Then if you want to distribute a single page HTML version::
 
-	make singlehtml
+  make singlehtml
 
 This will combine all of your HTML pages into a single page.
 Check it out by opening it in your browser::
