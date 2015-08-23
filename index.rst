@@ -10,13 +10,13 @@ and deploying that code to Read the Docs.
 Schedule
 --------
 
-* 1:30-2 Start: Overview & Introduction to Concepts
-* 2-2:30 Setup: Installation, Setup, Building Docs
-* 2:30-3 Exercise 1: Getting started with RST & Sphinx
+* 1:30-2 Overview & Introduction to Concepts
+* 2-2:30 :doc:`start`
+* 2:30-3 :doc:`part-1`
 * 3-3:30 *Break*
-* 3:30-4 Exercise 2: Building References & API docs
-* 4-4:30 Exercise 3: Deploying to Read the Docs
-* 4:30-5 Finish: Individual exploration, Q&A
+* 3:30-4 :doc:`part-2`
+* 4-4:30 :doc:`part-3`
+* 4:30-5 :doc:`finish`
 
   
 Contents
@@ -26,14 +26,17 @@ Contents
   :maxdepth: 2
   :caption: Tutorial
 
+  start
   part-1
   part-2
   part-3
+  finish
 
 .. toctree::
   :maxdepth: 2
   :caption: Supplemental Material 
 
+  useful-links
   glossary
   
 

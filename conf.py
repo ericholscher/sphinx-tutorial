@@ -30,7 +30,12 @@ sys.path.insert(0, os.path.abspath('crawler/src'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.intersphinx', 'sphinx.ext.autodoc', 'sphinx.ext.doctest']
+extensions = [
+	'sphinx.ext.intersphinx', 
+	'sphinx.ext.autodoc', 
+	'sphinx.ext.doctest',
+	'sphinx.ext.todo',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -317,7 +322,9 @@ epub_copyright = u'2014, Daniel Greenfeld, Eric Holscher'
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': None}
+intersphinx_mapping = {
+  'sphinx': ('/Users/eric/checkouts/sphinx/doc/_build/html/', None),
+}
 
 rst_epilog = """
 .. _Sphinx: http://sphinx-doc.org/
