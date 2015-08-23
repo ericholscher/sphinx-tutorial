@@ -1,5 +1,5 @@
-Step 3
-======
+Step 3: Keeping Documentation Up to Date
+========================================
 
 Now we have a wonderful set of documentation,
 so we want to make sure it stays up to date and correct.
@@ -8,36 +8,49 @@ There are two factors here:
 * The documentation is up to date with the code
 * The user is seeing the latest version of the docs
 
-We will solve the first problem with Sphinx's :doc:`doctest` module.
+We will solve the first problem with Sphinx's :mod:`~sphinx.ext.doctest` module.
 The second problem we will solve by deploying our docs to `Read the Docs`_.
 
-sphinx.ext.doctest
-------------------
+Concepts
+********
 
-This module is quite powerful.
+Testing your code
+-----------------
+
+Sphinx ships with a ``doctest`` module which is quite powerful.
 It allows you to run tests against your code inside your docs.
 This means that you can verify all of the code examples work,
 so that your docs are always up to date with your code!
 
 .. warning:: This only works for Python currently.
 
-.. todo:: fix doc link
-
-You can read the full `documentation`_,
+You can read the full Sphinx docs for :module:`~sphinx.ext.doctest`,
 but here is a basic example::
 
-	>>> print "hello there"
-	hello there
+	>>> sum(2, 2)
+	4
 
 When you run this example,
 Sphinx will validate the return is what is expected.
 
-Let's look at a more interesting example.
+Tasks
+*****
+
+Add doctests to our utils
+-------------------------
+
+The utils module is inside ``crawler`` is a good candidate for testing.
+It has small,
+self-contained pieces of logic that will work great as doctests.
+
 Add a ``utils.rst`` module to your project that looks like:
 
 .. literalinclude:: crawler/docs/step3/utils.rst
    :language: rst
    :linenos:
+
+.. note::
+   Live Preview: :doc:`crawler/docs/step3/utils`
 
 As you can see here,
 we are actually testing our logic.
@@ -59,7 +72,6 @@ so users won't be confused.
 		  They will need to include full import paths though,
 		  as Sphinx can't guarentee the ``testsetup::`` directive will be called.
 
-
 Read the Docs
 -------------
 
@@ -80,3 +92,20 @@ It will:
 	* Serve it up online at ``http://<projectname>.readthedocs.org``
 
 Let's see what that looks like in practice.
+
+Extra Credit
+************
+
+Have some extra time left?
+Let's run the code and see if it actually works!
+
+Go ahead and run the crawler against the Read the Docs documentation::
+
+	# in crawler/src/crawler
+	python main.py -u https://docs.readthedocs.org
+
+You should see your terminal start printing output,
+if your internet if working.
+
+Can you add another command line option,
+and document it?
