@@ -1,8 +1,11 @@
 Getting Started: Overview & Introduction to Concepts
 ====================================================
 
-Philosophy
-----------
+Concepts
+********
+
+Sphinx Philosophy
+-----------------
 
 `Sphinx`_ is what is called a documentation generator.
 This means that it takes a bunch of source files in plain text,
@@ -19,6 +22,9 @@ This means that you should be minimally familiar with `reStructuredText`_ as
 a language.
 It's similar to Markdown in a lot of ways,
 if you are already familiar with Markdown.
+
+Tasks
+*****
 
 Installing Sphinx
 -----------------
@@ -127,3 +133,24 @@ This should display a rendered HTML page that says **Welcome to Crawler’s docu
 ``make html`` is the main way you will build HTML documentation locally.
 It is simply a wrapper around a more complex call to Sphinx,
 which you can see as the first line of output.
+
+Extra Credit
+************
+
+Have some extra time left?
+Check out these other cool things you can do with Sphinx.
+
+Understanding ``conf.py``
+-------------------------
+
+Sphinx is quite configurable,
+which can be a bit overwhelming.
+However, 
+the ``conf.py`` file is quite well docuemnted.
+You can read through it and get some ideas about what all it can do.
+
+A couple of my favorite settings:
+
+* html_theme
+
+This is all well documented in the Sphinx :ref:`sphinx:build-config` doc.

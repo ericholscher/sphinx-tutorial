@@ -24,7 +24,7 @@ so that your docs are always up to date with your code!
 
 .. warning:: This only works for Python currently.
 
-You can read the full Sphinx docs for :module:`~sphinx.ext.doctest`,
+You can read the full Sphinx docs for :mod:`~sphinx.ext.doctest`,
 but here is a basic example::
 
 	>>> sum(2, 2)
@@ -98,6 +98,9 @@ Extra Credit
 
 Have some extra time left?
 Let's run the code and see if it actually works!
+
+Run the crawler
+---------------
 
 Go ahead and run the crawler against the Read the Docs documentation::
 

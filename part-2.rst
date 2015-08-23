@@ -206,7 +206,7 @@ Let's look through the code to understand what's happening here more.
 Understand the code
 -------------------
 
-A lot of the magic that is happening in :ref:`importing-code` above is actually in the source code.
+A lot of the magic that is happening in `Importing Code`_ above is actually in the source code.
 
 Check out the code for ``crawler/main.py``:
 
