@@ -14,4 +14,4 @@ Some ideas:
  * Sphinx ProgramOutput
  * Read the Docs Admin Panel
  * Apply these docs to a project you have
- * Talk with a neighbor
+ * Show a neighbor what you've done & talk about the concepts learned.
