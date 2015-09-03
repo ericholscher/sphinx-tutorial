@@ -1,4 +1,4 @@
-Part 2: Building References & API docs
+Step 2: Building References & API docs
 ======================================
 
 Concepts
