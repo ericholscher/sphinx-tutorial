@@ -149,8 +149,11 @@ However,
 the ``conf.py`` file is quite well docuemnted.
 You can read through it and get some ideas about what all it can do.
 
-A couple of my favorite settings:
+A few of the more useful settings are:
 
+* project
 * html_theme
+* extensions
+* exclude_patterns
 
 This is all well documented in the Sphinx :ref:`sphinx:build-config` doc.
