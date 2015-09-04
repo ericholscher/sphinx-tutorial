@@ -201,4 +201,4 @@ Check it out by opening it in your browser::
           that your :ref:`TOC Tree <toctree-syntax>` was defined.
 
 
-Now it is time to move on to :doc:`part-2`.
+Now it is time to move on to :doc:`step-2`.

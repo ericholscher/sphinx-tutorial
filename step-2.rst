@@ -195,7 +195,7 @@ This is amazingly powerful and a great way to write documentation.
 Could it get better?
 In fact,
 it can and it will.
-Let's go on to :doc:`part-3`.
+Let's go on to :doc:`step-3`.
 
 Extra Credit
 ************

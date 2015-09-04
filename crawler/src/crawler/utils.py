@@ -6,7 +6,7 @@ def log(url, status):
     Log information about a response to the console.
 
     :param url: The URL that was retrieved.
-    :param status: A status code for the :py:cls:`requests:Response`.
+    :param status: A status code for the `Response`.
 
     """
     if 200 <= int(status) < 300:

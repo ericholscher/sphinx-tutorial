@@ -12,10 +12,10 @@ Schedule
 
 * 1:30-2 Introduction to the Tutorial
 * 2-2:30 :doc:`start`
-* 2:30-3 :doc:`part-1`
+* 2:30-3 :doc:`step-1`
 * 3-3:30 *Break*
-* 3:30-4 :doc:`part-2`
-* 4-4:30 :doc:`part-3`
+* 3:30-4 :doc:`step-2`
+* 4-4:30 :doc:`step-3`
 * 4:30-5 :doc:`finish`
 
   
@@ -27,9 +27,9 @@ Contents
    :caption: Tutorial
 
    start
-   part-1
-   part-2
-   part-3
+   step-1
+   step-2
+   step-3
    finish
 
 .. toctree::
