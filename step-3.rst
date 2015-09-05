@@ -50,7 +50,7 @@ Open your ``api.rst`` module to your project that looks like:
    :linenos:
 
 .. note::
-   Live Preview: :doc:`crawler/docs/step3/utils`
+   Live Preview: :doc:`crawler/docs/step3/api`
 
 As you can see here,
 we are actually testing our logic.
