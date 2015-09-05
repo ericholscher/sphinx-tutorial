@@ -10,14 +10,18 @@ Referencing
 Another important Sphinx feature is that it allows referencing across documents.
 This is another powerful way to tie documents together.
 
-The simplest way to do this is to define an explicit reference object::
+The simplest way to do this is to define an explicit reference object:
+
+.. code-block:: rst
 
    .. _reference-name:
 
    Cool section
    ------------
 
-Which can then be referenced with ``:ref:``::
+Which can then be referenced with ``:ref:``:
+
+.. code-block:: rst
 
    :ref:`reference-name`
 
@@ -30,13 +34,17 @@ Sphinx also has much more powerful semantic referencing capabilties,
 which knows all about software development concepts.
 
 Say you're creating a CLI application. 
-You can define an option for that program quite easily::
+You can define an option for that program quite easily:
+
+.. code-block:: rst
 
    .. option:: -i <regex>, --ignore <regex>
 
       Ignore pages that match a specific pattern.
 
-That can also be referenced quite simply::
+That can also be referenced quite simply:
+
+.. code-block:: rst
 
    :option:`-i`
 
@@ -50,7 +58,9 @@ External References
 -------------------
 
 Sphinx also includes a number of pre-defined references for external concepts.
-Things like PEP's and RFC's::
+Things like PEP's and RFC's:
+
+.. code-block:: rst
 
    You can learn more about this at :pep:`8` or :rfc:`1984`.
 
@@ -64,13 +74,15 @@ Automatically generating this markup
 Of course, Sphinx wants to make your life easy.
 It includes ways to automatically create these object definitions for your own code.
 This is called ``audodoc``,
-which allows you do to syntax like this::
+which allows you do to syntax like this:
+
+.. code-block:: rst
 
    .. automodule:: crawler
 
 and have it document the full Python module importable as ``crawler``.
 
-.. note:: The module must be importable by Sphinx when running.
+.. warning:: The module must be importable by Sphinx when running.
           We'll cover how to do this in the Tasks below.
 
 You can read more about this in the Sphinx :mod:`~sphinx.ext.autodoc` docs.
@@ -88,21 +100,25 @@ Including a Cookbook or Examples section will be a great resource for this conte
 In your ``cookbook.rst``,
 add the following:
 
-.. literalinclude:: crawler/docs/step2/cookbook.rst
+.. literalinclude:: crawler/docs/step2/cookbook.txt
    :language: rst
    :linenos:
 
 .. note::
 	Live Preview: :doc:`crawler/docs/step2/cookbook`
 
-Notice the ``:option:`` blocks here.
-They are referencing a command line option for our program.
+Remember, you will need to use ``:option:`` blocks here.
+This is because they are referencing a command line option for our program.
 
-We need to go ahead and define those options.
+Adding Reference Targets
+------------------------
+
+Now that we have pointed at our CLI options,
+we need to actually define them.
 In your ``cli.rst`` file,
 add the following:
 
-.. literalinclude:: crawler/docs/step2/cli.rst
+.. literalinclude:: crawler/docs/step2/cli.txt
    :language: rst
    :linenos:
 
@@ -136,24 +152,38 @@ let's take a look.
 
 We'll go ahead an create an ``api.rst`` that will hold our API reference:
 
-.. literalinclude:: crawler/docs/step2/api.rst
+.. literalinclude:: crawler/docs/step2/api.txt
    :language: rst
    :linenos:
 
 .. note::
    Live Preview: :doc:`crawler/docs/step2/api`
 
-Here you can see we're using the ``.. autoclass::`` directive to pull in our source code.
+Remember, you'll need to use the  ``.. autoclass::`` directive to pull in your source code.
 This will render the docstrings of your Python code nicely.
 
-Sphinx actually imports your Python code when it does this,
-so you need to make sure that it can find your code.
+Tell Sphinx about your code
+---------------------------
+
+When Sphinx runs autodoc,
+it imports your Python code to pull off the docstrings.
+This means that Sphinx has to be able to see your code.
 We'll need to add our ``PYTHONPATH`` to our ``conf.py`` so it can import the code.
 
-.. literalinclude:: crawler/docs/step2/conf.py
-   :language: py
-   :lines: 18-31
-   :linenos:
+If you open up your ``conf.py`` file,
+you should see something close to this on line 18:
+
+.. literalinclude:: crawler/docs/step1/conf.py
+   :lines: 18-21
+
+As it notes,
+you need to let it know the path to your Python source.
+In our example it will be ``../src/``,
+so go ahead and put that in this setting.
+
+.. note:: You should always use relative paths here.
+          Part of the value of Sphinx is having your docs build on other people's computers,
+          and if you hard code local paths that won't work!
 
 Try it out
 ~~~~~~~~~~
@@ -170,7 +200,7 @@ Tie it all together
 Now let's link directly to that for users who come in to the project.
 Update your ``index.rst`` to look like:
 
-.. literalinclude:: crawler/docs/step2/index.rst
+.. literalinclude:: crawler/docs/step2/index.txt
    :language: rst
    :linenos:
 
@@ -192,16 +222,12 @@ The beauty of this approach is that it allows you to keep your prose and referen
 It even lets you semantically reference the code from inside the docs.
 This is amazingly powerful and a great way to write documentation.
 
-Could it get better?
-In fact,
-it can and it will.
-Let's go on to :doc:`step-3`.
-
 Extra Credit
 ************
 
 Have some extra time left?
 Let's look through the code to understand what's happening here more.
+
 
 Understand the code
 -------------------
@@ -218,4 +244,16 @@ we're heavily using RST in our docstrings.
 This gives us the same power as we have in Sphinx,
 but allows it to live within the code base.
 
-This approach of having 
+This approach of having the docs live inside the code is great for some things.
+However,
+the power of Sphinx allows you to mix docstrings and prose documentation together.
+This lets you keep the amount of 
+
+Moving on
+---------
+
+Could it get better?
+In fact,
+it can and it will.
+Let's go on to :doc:`step-3`.
+

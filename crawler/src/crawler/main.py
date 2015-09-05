@@ -65,6 +65,10 @@ class Crawler(object):
 
 
 def run_main():
+    """
+    A small wrapper that is used for running as a CLI Script.
+    """
+
     parser = OptionParser()
     parser.add_option("-u", "--url", dest="url", default="http://docs.readthedocs.org/en/latest/",
                       help="URL to fetch")

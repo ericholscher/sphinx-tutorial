@@ -35,20 +35,32 @@ so it can be installed like any other python library.
 Every Operating System should have Python pre-installed,
 so you should just have to run::
 
-    sudo easy_install Sphinx
+    pip install sphinx
 
 .. note:: Advanced users can install this in a virtualenv if they wish.
-    Also, ``pip install Sphinx`` works fine if you have Pip.
+          Also, ``easy_install install Sphinx`` works fine if you don't have pip.
+
+Get this repo
+-------------
+
+To do this tutorial,
+you need the actual repository.
+It contains the example code that we will be documenting.
+
+You can clone it here::
+
+    git clone https://github.com/ericholscher/djangocon-sphinx-tutorial
+
 
 Getting Started
 ---------------
 
 Now you are ready to creating documentation.
-Create a directory called ``crawler``.
-Inside that directory you should create a ``docs`` directory,
+You should have a directory called ``crawler``,
+which contains source code in it's ``src`` directory.
+Inside the ``crawler`` you should create a ``docs`` directory,
 and move into it::
   
-    mkdir crawler
     cd crawler
     mkdir docs
     cd docs
@@ -59,7 +71,7 @@ Then you can create the Sphinx project skeleton in this directory::
 
 Have the *Project name* be ``Crawler``, 
 put in your own *Author name*,
-and put in 1.0 be the *Project version*.
+and put in ``1.0`` as the *Project version*.
 Otherwise you can accept the default options.
 
 My output looks like this:
@@ -70,11 +82,12 @@ My output looks like this:
 Your file system should now look similar to this::
 
     crawler
+    ├── src
     └── docs
         ├── index.rst
         ├── conf.py
         ├── Makefile
-        └── make.bat
+        ├── make.bat
         ├── _build
         ├── _static
         ├── _templates
@@ -109,7 +122,9 @@ Building docs
 -------------
 
 Let's build our docs into HTML to see how it works.
-Simply run::
+Simply run:
+
+.. code-block:: python
 
     # Inside top-level docs/ directory.
     make html
@@ -130,9 +145,31 @@ Then open your browser to http://localhost:8000.
 
 This should display a rendered HTML page that says **Welcome to Crawler’s documentation!** at the top.
 
-``make html`` is the main way you will build HTML documentation locally.
-It is simply a wrapper around a more complex call to Sphinx,
-which you can see as the first line of output.
+.. note:: ``make html`` is the main way you will build HTML documentation locally.
+            It is simply a wrapper around a more complex call to Sphinx,
+            which you can see as the first line of output.
+
+Custom Theme
+------------
+
+You'll notice your docs look a bit different than mine.
+You can change this by setting the ``html_theme`` setting in your ``conf.py``.
+Go ahead and set it like this::
+
+    html_theme = 'sphinx_rtd_theme'
+
+If you rebuild your documentation,
+you will see the new theme::
+
+    make html
+
+.. warning:: Didn't see your new theme?
+             That's because Sphinx is smart,
+             and only rebuilds pages that have changed.
+             It might have thought none of your pages changed,
+             so it didn't rebuild anything.
+             Fix this by running a ``make clean html``,
+             which will force a full rebuild.
 
 Extra Credit
 ************
@@ -157,3 +194,8 @@ A few of the more useful settings are:
 * exclude_patterns
 
 This is all well documented in the Sphinx :ref:`sphinx:build-config` doc.
+
+Moving on
+---------
+
+Now it is time to move on to :doc:`step-1`.

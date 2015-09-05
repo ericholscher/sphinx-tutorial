@@ -1,11 +1,6 @@
 Step 1: Getting started with RST & Sphinx
 =========================================
 
-.. note:: I'm a firm beliver that tutorials should 
-          make you feel like a hero in the first 30 minutes.
-          Step 1 aims to show you the power of Sphinx,
-          and reach a moment of "kick ass!" as quickly as possible.
-
 Now that we have our basic skeleton,
 let's document the project.
 As you might have guessed from the name,
@@ -17,7 +12,7 @@ we'll have the following pages:
 * Index Page
 * Support
 * Installation
-* Cookbook/Examples
+* Cookbook
 * Command Line Options
 * API
 
@@ -28,10 +23,16 @@ Concepts
 ********
 
 .. index::
-  pair: Syntax; Hyperlink
+   pair: Syntax; Hyperlink
 
 Hyperlink Syntax
 ----------------
+
+.. code-block:: rst
+   
+   `A cool website`_
+
+   .. _A cool website: http://sphinx-doc.org
 
 The link text is set by putting a ``_`` after some text.
 The ````` is used to group text,
@@ -47,6 +48,16 @@ The link target is defined at the bottom of the section with ``.. _<link text>: 
 
 Code Example Syntax
 -------------------
+
+.. code-block:: rst
+
+   A cool bit of code::
+
+      Some cool Code
+
+   .. code-block:: rst
+
+      A bit of **rst** which should be *highlighted* properly.
 
 The syntax for displaying code is ``::``.
 When it is used at the end of a sentence,
@@ -67,10 +78,7 @@ You can see this concept with our ``code-block`` directive later.
 Table of Contents Tree
 ----------------------
 
-Now would be a good time to introduce the ``toctree``.
-One of the main concepts in Sphinx is that it allows multiple pages to be combined into a cohesive hierarchy.
-The ``toctree`` directive is a fundamental part of this structure.
-A simple ``toctree`` directive looks like this::
+.. code-block:: rst
 
   .. toctree::
      :maxdepth: 2
@@ -78,8 +86,12 @@ A simple ``toctree`` directive looks like this::
      install
      support
 
-This will then output a Table of Contents in the page where this occurs.
-The ``maxdepth`` argument tells Sphinx include 2 levels of headers in it's output.
+Now would be a good time to introduce the ``toctree``.
+One of the main concepts in Sphinx is that it allows multiple pages to be combined into a cohesive hierarchy.
+The ``toctree`` directive is a fundamental part of this structure.
+
+The above example will output a Table of Contents in the page where it occurs.
+The ``maxdepth`` argument tells Sphinx to include 2 levels of headers in it's output.
 It will output the 2 top-level headers of the pages listed.
 This also tells Sphinx that the other pages are sub-pages of the current page,
 creating a "tree" structure of the pages::
@@ -88,27 +100,12 @@ creating a "tree" structure of the pages::
     ├── install
     ├── support
 
-The TocTree is also used for generating the navagation elements inside Sphinx.
-It is quite important,
-and one of the most powerful features of Sphinx.
+.. note:: The TOC Tree is also used for generating the navigation elements inside Sphinx.
+          It is quite important,
+          and one of the most powerful concepts in Sphinx.
 
 Tasks
 *****
-
-Create Support page
--------------------
-
-It's always important that users can ask questions when they get stuck.
-There are many ways to handle this,
-but normal approaches are to have an IRC channel and mailing list.
-
-Go ahead and put this markup in your ``support.rst``:
-
-.. literalinclude:: crawler/docs/step1/support.txt
-   :linenos:
-
-.. note::
-   Live Preview: :doc:`crawler/docs/step1/support`
 
 Create Installation page
 ------------------------
@@ -119,13 +116,28 @@ For our example,
 we are installing a basic Python script,
 so it will be pretty easy.
 
-Include the following in your ``install.rst``:
+Include the following in your ``install.rst``, properly marked up:
 
 .. literalinclude:: crawler/docs/step1/install.txt
    :linenos:
 
 .. note::
    Live Preview: :doc:`crawler/docs/step1/install`
+
+Create Support page
+-------------------
+
+It's always important that users can ask questions when they get stuck.
+There are many ways to handle this,
+but normal approaches are to have an IRC channel and mailing list.
+
+Go ahead and put this in your ``support.rst``, but add the proper RST markup:
+
+.. literalinclude:: crawler/docs/step1/support.txt
+   :linenos:
+
+.. note::
+   Live Preview: :doc:`crawler/docs/step1/support`
 
 Add TocTree
 -----------
@@ -134,7 +146,7 @@ Now you need to tie all these files together.
 As we mentioned above,
 the :ref:`toctree-syntax` is the best way to do this.
 Go ahead and complete the ``toctree`` directive in your ``index.rst`` file,
-adding the new pages.
+adding the new ``install`` and ``support``.
 
 Sanity Check
 ------------
@@ -142,10 +154,12 @@ Sanity Check
 Your filesystem should now look something like this::
 
     crawler
+    ├── src
     └── docs
         ├── index.rst
         ├── support.rst
         ├── install.rst
+        ├── Makefile
         ├── conf.py
 
 Build Docs
@@ -200,5 +214,33 @@ Check it out by opening it in your browser::
 .. note:: You'll notice that it included the documents in the order
           that your :ref:`TOC Tree <toctree-syntax>` was defined.
 
+Play with RST
+-------------
+
+RST takes a bit of practice to wrap your head around.
+Go over to http://rst.ninjs.org,
+which is a live preview.
+
+Looking for some ideas of what the syntax contains?
+The :ref:`rst-primer` in the Sphinx docs is a great place to start.
+
+Local setup
+~~~~~~~~~~~
+
+Want to be able to run this locally?
+Go ahead and clone the repo and get it setup::
+
+   git clone https://github.com/anru/rsted
+   cd rsted
+   pip install -r pip-requirements.txt
+   python application.py
+
+.. note:: If you already have the repository for this project,
+          the ``rsted`` repo should already be in your ``usb`` directory   .
+
+You can now view the application by going to http://localhost:5000.
+
+Moving on
+---------
 
 Now it is time to move on to :doc:`step-2`.

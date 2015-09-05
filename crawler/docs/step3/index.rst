@@ -1,22 +1,19 @@
 Crawler Step 3 Documentation
 ============================
 
-User Guide
-~~~~~~~~~~
+Our Crawler will make your life as a web developer easier.
+You can learn more about it in our documentation.
 
 .. toctree::
-   :maxdepth: 2
+   :caption: User Guide
 
    install
    support
    cookbook
 
-Programmer Reference
-~~~~~~~~~~~~~~~~~~~~
-
 .. toctree::
-   :maxdepth: 2
+   :caption: Programmer Reference
 
    cli
    api
-   utils
+

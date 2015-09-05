@@ -43,9 +43,9 @@ The utils module is inside ``crawler`` is a good candidate for testing.
 It has small,
 self-contained pieces of logic that will work great as doctests.
 
-Add a ``utils.rst`` module to your project that looks like:
+Open your ``api.rst`` module to your project that looks like:
 
-.. literalinclude:: crawler/docs/step3/utils.rst
+.. literalinclude:: crawler/docs/step3/api.txt
    :language: rst
    :linenos:
 
@@ -72,6 +72,17 @@ so users won't be confused.
 		  They will need to include full import paths though,
 		  as Sphinx can't guarentee the ``testsetup::`` directive will be called.
 
+Requirements
+------------
+
+In order for Read the Docs to build your code,
+it needs to be able to import it.
+This means it needs all of the required Python modules you import in the code.
+
+You can add a ``requirements.txt`` to the top-level of your project:
+
+.. literalinclude:: requirements.txt
+
 Read the Docs
 -------------
 
@@ -86,10 +97,20 @@ and is free for all open source projects.
 * Sit back and have a drink while Read the Docs does the rest.
 
 It will:
-	* Pull down your code
-	* Install your ``requirements.txt``
-	* Build HTML, PDF, and ePub of your docs
-	* Serve it up online at ``http://<projectname>.readthedocs.org``
+
+* Pull down your code
+* Install your ``requirements.txt``
+* Build HTML, PDF, and ePub of your docs
+* Serve it up online at ``http://<projectname>.readthedocs.org``
+
+Read the Docs Features
+~~~~~~~~~~~~~~~~~~~~~~
+
+Read the Docs gives you a number of additional features.
+
+* You can add Versions to your project for each tag & branch.
+* You can alerts for when your doc build fails
+* You can search across the full set of docs
 
 Let's see what that looks like in practice.
 
