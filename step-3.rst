@@ -26,13 +26,32 @@ so that your docs are always up to date with your code!
 .. warning:: This only works for Python currently.
 
 You can read the full Sphinx docs for :mod:`~sphinx.ext.doctest`,
-but here is a basic example::
+but here is a basic example:
 
-	>>> sum(2, 2)
-	4
+.. code-block:: rst
+
+	.. doctest::
+
+		>>> sum(2, 2)
+		4
 
 When you run this example,
 Sphinx will validate the return is what is expected.
+
+If you need any other code to be run,
+but not output to the user,
+you can use ``testsetup``:
+
+
+.. code-block:: rst
+
+	.. testsetup::
+
+		import os
+
+		x = 4
+
+This will then be available in the examples that you actually show your user.
 
 Tasks
 *****
