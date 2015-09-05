@@ -22,8 +22,32 @@ and then we can talk more about the pages to create.
 Concepts
 ********
 
+A lot of these RST syntax examples are covered in the Sphinx :ref:`sphinx:rst-primer`.
+
 .. index::
    pair: Syntax; Hyperlink
+
+Headings
+--------
+
+.. code-block:: rst
+
+   Title
+   =====
+
+   Section
+   -------
+
+   Subsection
+   ~~~~~~~~~~
+
+Every Sphinx document has multiple level of headings.
+Section headers are created by underlining 
+the section title with a punctuation character, at least
+as long as the text.
+
+They give structure to the document,
+which is used in navigation and in the display in all output formats.
 
 Hyperlink Syntax
 ----------------
