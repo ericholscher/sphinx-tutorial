@@ -1,5 +1,5 @@
-Step 1: Getting started with RST & Sphinx
-=========================================
+Step 1: Getting started with RST 
+================================
 
 Now that we have our basic skeleton,
 let's document the project.
