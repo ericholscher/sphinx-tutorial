@@ -108,6 +108,8 @@ Try this piece of code::
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.test")
 
 
+Other Interesting Things
+------------------------
 
 Take some time to play around and get to know Sphinx better..
 
