@@ -5,6 +5,7 @@ Now we have a wonderful set of documentation,
 so we want to make sure it stays up to date and correct.
 
 There are two factors here:
+
 * The documentation is up to date with the code
 * The user is seeing the latest version of the docs
 
