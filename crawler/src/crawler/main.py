@@ -9,7 +9,7 @@ except ImportError:
 import requests
 from bs4 import BeautifulSoup
 
-from .utils import log, should_ignore
+from utils import log, should_ignore
 
 
 class Crawler(object):
@@ -30,7 +30,10 @@ class Crawler(object):
     def __init__(self, url, delay, ignore):
         self.url = url
         self.delay = delay
-        self.ignore = ignore.split(',')
+        if ignore:
+            self.ignore = ignore.split(',')
+        else:
+            self.ignore = []
 
     def get(self, url):
         """
@@ -74,7 +77,7 @@ def run_main():
                       help="URL to fetch")
     parser.add_option("-d", "--delay", dest="delay", type="int", default=1,
                       help="Delay between fetching")
-    parser.add_option("-i", "--ignore", dest="ignore", default="",
+    parser.add_option("-i", "--ignore", dest="ignore", default='',
                       help="Ignore a subset of URL's")
 
     (options, args) = parser.parse_args()
