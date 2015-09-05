@@ -72,6 +72,28 @@ so users won't be confused.
 		  They will need to include full import paths though,
 		  as Sphinx can't guarentee the ``testsetup::`` directive will be called.
 
+
+Test your docs
+--------------
+
+You can now go ahead and test your docs::
+
+	make doctest
+
+It should provide output that looks similar to this::
+
+	Doctest summary
+	===============
+	    5 tests
+	    2 failures in tests
+	    0 failures in setup code
+	    0 failures in cleanup code
+	build finished with problems.
+
+As you can see,
+some of the tests are broken!
+You should go ahead and fix the tests :)
+
 Requirements
 ------------
 

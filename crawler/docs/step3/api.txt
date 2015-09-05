@@ -5,28 +5,26 @@ The main class you need to care about is crawler.main.Crawler
 
 crawler.main
 
-automodule: crawler.main
-
 crawler.utils
 
-automethod: crawler.utils.should_ignore
+crawler.utils.should_ignore
 
->>> should_ignore(['blog/$'], 'http://ericholscher.com/blog/')
+should_ignore(['blog/$'], 'http://ericholscher.com/blog/')
 True
 
 # This test should fail
->>> should_ignore(['home'], 'http://ericholscher.com/blog/')
+should_ignore(['home'], 'http://ericholscher.com/blog/')
 True
 
-automethod: crawler.utils.log
+crawler.utils.log
 
->>> log('http://ericholscher.com/blog/', 200)
+log('http://ericholscher.com/blog/', 200)
 OK: 200 http://ericholscher.com/blog/ 
 
->>> log('http://ericholscher.com/blog/', 500)
+log('http://ericholscher.com/blog/', 500)
 ERR: 500 http://ericholscher.com/blog/
 
 # This test should fail
->>> log('http://ericholscher.com/blog/', 500)
+log('http://ericholscher.com/blog/', 500)
 OK: 500 http://ericholscher.com/blog/
 
