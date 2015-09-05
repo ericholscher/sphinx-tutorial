@@ -27,7 +27,7 @@ A lot of these RST syntax examples are covered in the Sphinx :ref:`sphinx:rst-pr
 .. index::
    pair: Syntax; Hyperlink
 
-Headings
+Sections
 --------
 
 .. code-block:: rst

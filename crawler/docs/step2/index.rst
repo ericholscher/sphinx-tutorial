@@ -1,7 +1,6 @@
 Crawler Step 2 Documentation
 ============================
 
-
 Our Crawler will make your life as a web developer easier.
 You can learn more about it in our documentation.
 
