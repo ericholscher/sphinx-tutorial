@@ -13,6 +13,17 @@ or open an issue on `GitHub`_.
 .. _@ericholscher: http://twitter.com/ericholscher
 .. _GitHub: http://github.com/ericholscher/sphinx-tutorial
 
+Schedule
+--------
+
+* 1:30-2 Introduction to the Tutorial
+* 2-2:30 :doc:`start`
+* 2:30-3 :doc:`step-1`
+* 3-3:30 *Break*
+* 3:30-4 :doc:`step-2`
+* 4-4:30 :doc:`step-3`
+* 4:30-5 :doc:`finish`
+
 .. toctree::
    :maxdepth: 2
    :caption: Tutorial
