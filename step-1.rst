@@ -49,6 +49,17 @@ as long as the text.
 They give structure to the document,
 which is used in navigation and in the display in all output formats.
 
+Code Samples
+------------
+
+.. code-block:: rst
+   
+   You can use ``backticks`` for showing ``highlighted`` code.
+
+If you want to make sure that text is shown in monospaced fonts for code examples or concepts,
+use double backticks arond it.
+It looks ``like this`` on output.
+
 Hyperlink Syntax
 ----------------
 
