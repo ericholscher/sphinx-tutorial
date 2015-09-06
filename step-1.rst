@@ -248,21 +248,22 @@ which is a live preview.
 Looking for some ideas of what the syntax contains?
 The :ref:`rst-primer` in the Sphinx docs is a great place to start.
 
-Local setup
-~~~~~~~~~~~
+.. 
+    Local setup
+    ~~~~~~~~~~~
 
-Want to be able to run this locally?
-Go ahead and clone the repo and get it setup::
+    Want to be able to run this locally?
+    Go ahead and clone the repo and get it setup::
 
-   git clone https://github.com/anru/rsted
-   cd rsted
-   pip install -r pip-requirements.txt
-   python application.py
+       git clone https://github.com/anru/rsted
+       cd rsted
+       pip install -r pip-requirements.txt
+       python application.py
 
-.. note:: If you already have the repository for this project,
-          the ``rsted`` repo should already be in your ``usb`` directory   .
+    .. note:: If you already have the repository for this project,
+              the ``rsted`` repo should already be in your ``usb`` directory   .
 
-You can now view the application by going to http://localhost:5000.
+    You can now view the application by going to http://localhost:5000.
 
 Moving on
 ---------
