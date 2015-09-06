@@ -1,8 +1,25 @@
 Finishing Up: Additional Extensions & Individual Exploration
 ============================================================
 
-Individual Exploration
-**********************
+If there is much time left in the session,
+take some time to play around and get to know Sphinx better.
+There is a large ecosystem of extensions,
+and lots of builtin features we haven't covered.
+
+Part of being a good user of Sphinx is knowing what all is there.
+Here are a few options for what to look at:
+
+* :ref:`dev-extensions`
+* Read through all the existing :ref:`extensions`
+* `Breathe <http://breathe.readthedocs.org/en/latest/>`_
+* Explore the Read the Docs Admin Panel
+* Apply these docs to a project you have
+* Show a neighbor what you've done & talk about the concepts learned.
+
+Also, here are a number of more thought out examples of things you might do:
+
+.. contents:: 
+   :local:
 
 Markdown Support
 ----------------
@@ -106,18 +123,5 @@ Try this piece of code::
 
     # Set this to whatever your settings file should default to.
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.test")
-
-
-Other Interesting Things
-------------------------
-
-Take some time to play around and get to know Sphinx better..
-
- * All the default Sphinx extensions
- * Breathe
- * Sphinx ProgramOutput
- * Read the Docs Admin Panel
- * Apply these docs to a project you have
- * Show a neighbor what you've done & talk about the concepts learned.
 
 

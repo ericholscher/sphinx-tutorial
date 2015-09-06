@@ -27,6 +27,8 @@ Which can then be referenced with ``:ref:``:
 
 Which will then be rendered with the title of the section *Cool section*.
 
+Sphinx also supports ``:doc:`docname``` for linking to a document.
+
 Semantic Descriptions and References
 ------------------------------------
 
@@ -65,8 +67,6 @@ Things like PEP's and RFC's:
    You can learn more about this at :pep:`8` or :rfc:`1984`.
 
 You can read more about this in the Sphinx :ref:`inline-markup` docs.
-
-.. _Inline Markup: sphinx-doc.org/markup/inline.html
 
 Automatically generating this markup
 ------------------------------------
@@ -228,6 +228,34 @@ Extra Credit
 Have some extra time left?
 Let's look through the code to understand what's happening here more.
 
+Look through intersphinx
+------------------------
+
+Intersphinx allows you to bring the power of Sphinx references to multiple projects.
+It lets you pull in references,
+and semantically link them across projects.
+For example,
+in this guide we reference the Sphinx docs a lot,
+so we have this intersphinx setting::
+
+   intersphinx_mapping = {
+       'sphinx': ('http://sphinx-doc.org/', None),
+   }
+
+Which allows us to add a prefix to references and have them resolve:
+
+.. code-block:: rst
+
+   :ref:`sphinx:inline-markup`
+
+We can also ignore the prefix,
+and Sphinx will fall back to intersphinx references if none exist in the current project:
+
+.. code-block:: rst
+
+   :ref:`inline-markup`
+
+You can read more about this in the :mod:`~sphinx.ext.intersphinx` docs.
 
 Understand the code
 -------------------

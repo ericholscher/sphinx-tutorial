@@ -3,6 +3,7 @@ Command Line Options
 ====================
 
 These flags allow you to change the behavior of :program:`Crawler`.
+Check out how to use them in the :doc:`cookbook`.
 
 .. option:: -d <sec>, --delay <sec>
 

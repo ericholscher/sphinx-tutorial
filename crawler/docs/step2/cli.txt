@@ -1,6 +1,7 @@
 Command Line Options
 
 These flags allow you to change the behavior of Crawler.
+Check out how to use them in the Cookbook.
 
 -d <sec>, --delay <sec>
 
