@@ -86,7 +86,7 @@ You can also do a full range of auto functions:
 .. code-block:: rst
 
    .. autoclass::
-   .. autofuction:: 
+   .. autofunction:: 
    .. autoexception:: 
 
 .. warning:: The module must be importable by Sphinx when running.
@@ -157,7 +157,7 @@ Wouldn't it be great if we could do that with actual code too?
 Sphinx makes this easy,
 let's take a look.
 
-We'll go ahead an create an ``api.rst`` that will hold our API reference:
+We'll go ahead and create an ``api.rst`` that will hold our API reference:
 
 .. literalinclude:: crawler/docs/step2/api.txt
    :language: rst
@@ -291,4 +291,3 @@ Could it get better?
 In fact,
 it can and it will.
 Let's go on to :doc:`step-3`.
-
