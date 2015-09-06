@@ -323,14 +323,14 @@ epub_copyright = u'2014, Daniel Greenfeld, Eric Holscher'
 
 # Example configuration for intersphinx: refer to the Python standard library.
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-if on_rtd:
-    intersphinx_mapping = {
-        'sphinx': ('/Users/eric/checkouts/sphinx/doc/_build/html/', None),
-    }
-else:
-    intersphinx_mapping = {
-        'sphinx': ('http://sphinx-doc.org/', None),
-    }
+# if on_rtd:
+#     intersphinx_mapping = {
+#         'sphinx': ('/Users/eric/checkouts/sphinx/doc/_build/html/', None),
+#     }
+# else:
+intersphinx_mapping = {
+    'sphinx': ('http://sphinx-doc.org/', None),
+}
 
 
 rst_epilog = """

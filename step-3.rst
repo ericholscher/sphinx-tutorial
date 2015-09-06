@@ -92,13 +92,15 @@ so users won't be confused.
 		  They will need to include full import paths though,
 		  as Sphinx can't guarentee the ``testsetup::`` directive will be called.
 
-
 Test your docs
 --------------
 
 You can now go ahead and test your docs::
 
 	make doctest
+
+.. note:: You will need to make sure to add the ``sphinx.ext.doctest`` to your ``extensions``.
+	      Open up your ``conf.py`` file and make sure that you have it there.
 
 It should provide output that looks similar to this::
 
@@ -162,16 +164,30 @@ Extra Credit
 Have some extra time left?
 Let's run the code and see if it actually works!
 
+Explore doctests more
+---------------------
+
+Sphinx's :mod:`~sphinx.ext.doctest` module has more interesting options.
+You can do things that look more like normal unit tests,
+as well as specific "doctest-style" testing.
+Go in and re-write one of the existing tests to use the ``testcode`` directive instead of the ``doctest`` directive.
+
 Run the crawler
 ---------------
 
 Go ahead and run the crawler against the Read the Docs documentation::
 
 	# in crawler/src/crawler
-	python main.py -u https://docs.readthedocs.org
+	python main.py -u https://docs.readthedocs.org/en/latest/
 
 You should see your terminal start printing output,
 if your internet if working.
 
 Can you add another command line option,
 and document it?
+
+Moving on
+---------
+
+Now we are at the last part of our Tutorial.
+Let's head on over to :doc:`finish`.
