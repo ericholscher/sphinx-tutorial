@@ -160,6 +160,9 @@ on the same level as ``index.rst``, properly marked up:
 .. note::
    Live Preview: :doc:`crawler/docs/step1/install`
 
+You can now open the ``support.html`` file directly,
+but it isn't showing on the navigation..
+
 Create Support page
 -------------------
 
