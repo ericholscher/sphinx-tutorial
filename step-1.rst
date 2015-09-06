@@ -151,7 +151,8 @@ For our example,
 we are installing a basic Python script,
 so it will be pretty easy.
 
-Include the following in your ``install.rst``, properly marked up:
+Include the following in your ``install.rst``, 
+on the same level as ``index.rst``, properly marked up:
 
 .. literalinclude:: crawler/docs/step1/install.txt
    :linenos:

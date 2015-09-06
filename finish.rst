@@ -6,6 +6,8 @@ take some time to play around and get to know Sphinx better.
 There is a large ecosystem of extensions,
 and lots of builtin features we haven't covered.
 
+I'm happy to consult with you about interesting challanges you might be facing with docs.
+
 Part of being a good user of Sphinx is knowing what all is there.
 Here are a few options for what to look at:
 

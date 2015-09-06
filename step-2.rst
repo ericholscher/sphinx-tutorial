@@ -143,7 +143,7 @@ Do a::
 	make html
 
 Here you will see that the ``:option:`` blocks magically become links to the definition.
-This is your first taste of :term:`Semantic Markup`.
+This is your first taste of Semantic Markup.
 With Sphinx,
 we are able to simply say that something is a ``option``,
 and then it handles everything for us;
