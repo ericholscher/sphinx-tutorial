@@ -81,9 +81,16 @@ which allows you do to syntax like this:
    .. automodule:: crawler
 
 and have it document the full Python module importable as ``crawler``.
+You can also do a full range of auto functions:
+
+.. code-block:: rst
+
+   .. autoclass::
+   .. autofuction:: 
+   .. autoexception:: 
 
 .. warning:: The module must be importable by Sphinx when running.
-          We'll cover how to do this in the Tasks below.
+             We'll cover how to do this in the Tasks below.
 
 You can read more about this in the Sphinx :mod:`~sphinx.ext.autodoc` docs.
 

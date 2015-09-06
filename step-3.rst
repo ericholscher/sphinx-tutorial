@@ -63,7 +63,7 @@ The utils module is inside ``crawler`` is a good candidate for testing.
 It has small,
 self-contained pieces of logic that will work great as doctests.
 
-Open your ``api.rst`` module to your project that looks like:
+Open your ``api.rst``, and update it to look like:
 
 .. literalinclude:: crawler/docs/step3/api.txt
    :language: rst
