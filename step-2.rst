@@ -86,7 +86,7 @@ You can also do a full range of auto functions:
 .. code-block:: rst
 
    .. autoclass::
-   .. autofuction:: 
+   .. autofunction:: 
    .. autoexception:: 
 
 .. warning:: The module must be importable by Sphinx when running.
