@@ -38,6 +38,7 @@ Schedule
    :maxdepth: 2
    :caption: Supplemental Material 
 
+   cheatsheet
    useful-links
    glossary
   
