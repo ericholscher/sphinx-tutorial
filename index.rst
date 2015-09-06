@@ -39,9 +39,6 @@ Schedule
    :caption: Supplemental Material 
 
    cheatsheet
-   useful-links
-   glossary
-  
 
 .. toctree::
    :caption: Step 1
