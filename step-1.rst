@@ -256,6 +256,8 @@ RST takes a bit of practice to wrap your head around.
 Go over to http://rst.ninjs.org,
 which is a live preview.
 
+.. note:: Use the :doc:`cheatsheet` for lots more ideas!
+
 Looking for some ideas of what the syntax contains?
 The :ref:`rst-primer` in the Sphinx docs is a great place to start.
 
