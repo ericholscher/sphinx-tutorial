@@ -55,7 +55,7 @@ You can clone it here::
 Getting Started
 ---------------
 
-Now you are ready to creating documentation.
+Now you are ready to start creating documentation.
 You should have a directory called ``crawler``,
 which contains source code in it's ``src`` directory.
 Inside the ``crawler`` you should create a ``docs`` directory,
@@ -116,7 +116,7 @@ Inside of this is:
     The directory to include all your static files, like images.
 
 ``_templates``: 
-    Allows you to override Sphinx templates to customze look and feel.
+    Allows you to override Sphinx templates to customize look and feel.
 
 Building docs
 -------------
