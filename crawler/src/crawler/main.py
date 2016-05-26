@@ -1,3 +1,6 @@
+"""
+Main Module
+"""
 import time
 from optparse import OptionParser
 # Python 3 compat

@@ -78,6 +78,7 @@ My output looks like this:
 
 .. literalinclude:: quickstart-output.txt
    :language: text
+   :linenos:
 
 Your file system should now look similar to this::
 

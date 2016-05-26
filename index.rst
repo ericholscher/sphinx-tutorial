@@ -16,13 +16,13 @@ or open an issue on `GitHub`_.
 Schedule
 --------
 
-* 1:30-2 Introduction to the Tutorial
-* 2-2:30 :doc:`start`
-* 2:30-3 :doc:`step-1`
-* 3-3:30 *Break*
-* 3:30-4 :doc:`step-2`
-* 4-4:30 :doc:`step-3`
-* 4:30-5 :doc:`finish`
+* 9-9:20 Introduction to the Tutorial
+* 9:20-9:50 :doc:`start`
+* 9:50-10:20 :doc:`step-1`
+* 10:20-10:40 *Break*
+* 10:40-11:10 :doc:`step-2`
+* 11:10-11:40 :doc:`step-3`
+* 11:40-12:20 :doc:`finish`
 
 .. toctree::
    :maxdepth: 2
