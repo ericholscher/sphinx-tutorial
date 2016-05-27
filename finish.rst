@@ -6,7 +6,7 @@ take some time to play around and get to know Sphinx better.
 There is a large ecosystem of extensions,
 and lots of builtin features we haven't covered.
 
-I'm happy to consult with you about interesting challanges you might be facing with docs.
+I'm happy to consult with you about interesting challenges you might be facing with docs.
 
 Part of being a good user of Sphinx is knowing what all is there.
 Here are a few options for what to look at:
@@ -127,3 +127,44 @@ Try this piece of code::
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.test")
 
 
+Tables
+------
+
+Tables can be a tricky part of a lot of lightweight markup languages.
+Luckily,
+RST has some really nice features around tables.
+It supports tables in a couple easier to use formats:
+
+* `CSV <http://docutils.sourceforge.net/docs/ref/rst/directives.html#id4>`_
+* `List <http://docutils.sourceforge.net/docs/ref/rst/directives.html#list-table>`_
+
+So for example,
+you can manage your tables in Google Docs,
+then export them as CSV in your docs.
+
+
+An example of a CSV table:
+
+.. code-block:: rst
+
+    .. csv-table:: 
+       :header: "Treat", "Quantity", "Description"
+       :widths: 15, 10, 30
+
+       "Albatross", 2.99, "On a stick!"
+       "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
+       crunchy, now would it?"
+       "Gannet Ripple", 1.99, "On a stick!"
+
+And a rendered example:
+
+.. csv-table:: 
+   :header: "Treat", "Quantity", "Description"
+   :widths: 15, 10, 30
+
+   "Albatross", 2.99, "On a stick!"
+   "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
+   crunchy, now would it?"
+   "Gannet Ripple", 1.99, "On a stick!"
+
+Go ahead and try it yourself!
