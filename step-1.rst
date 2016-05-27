@@ -57,7 +57,7 @@ Code Samples
    You can use ``backticks`` for showing ``highlighted`` code.
 
 If you want to make sure that text is shown in monospaced fonts for code examples or concepts,
-use double backticks arond it.
+use double backticks around it.
 It looks ``like this`` on output.
 
 Hyperlink Syntax

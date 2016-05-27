@@ -12,6 +12,8 @@ There are two factors here:
 We will solve the first problem with Sphinx's :mod:`~sphinx.ext.doctest` module.
 The second problem we will solve by deploying our docs to `Read the Docs`_.
 
+.. _step-3-concepts:
+
 Concepts
 ********
 
@@ -53,6 +55,24 @@ you can use ``testsetup``:
 
 This will then be available in the examples that you actually show your user.
 
+Hosting docs on Read the Docs
+-----------------------------
+
+Read the Docs (https://readthedocs.org) is an open source doc hosting site.
+It's built in Django,
+and is free to use for open source projects.
+It hosts Sphinx documentation,
+automatically building it each time you make a commit.
+
+Read the Docs gives you a number of additional features,
+over hosting Sphinx yourself:
+
+* You can add Versions to your project for each tag & branch.
+* You can alerts for when your doc build fails
+* You can search across the full set of docs with Elastic Search
+
+We'll be putting your docs up on Read the Docs at the end of this tutorial.
+
 Tasks
 *****
 
@@ -72,6 +92,8 @@ Open your ``api.rst``, and update it to look like:
 .. note::
    Live Preview: :doc:`crawler/docs/step3/api`
 
+Now go ahead and add the RST markup that is covered above in the :ref:`step-3-concepts` section.
+
 As you can see here,
 we are actually testing our logic.
 It also acts as documentation for your users,
@@ -90,7 +112,7 @@ so users won't be confused.
 
 .. note:: You can also put doctest blocks directly in your docstrings.
 		  They will need to include full import paths though,
-		  as Sphinx can't guarentee the ``testsetup::`` directive will be called.
+		  as Sphinx can't guarantee the ``testsetup::`` directive will be called.
 
 Test your docs
 --------------
@@ -147,16 +169,7 @@ It will:
 * Build HTML, PDF, and ePub of your docs
 * Serve it up online at ``http://<projectname>.readthedocs.org``
 
-Read the Docs Features
-~~~~~~~~~~~~~~~~~~~~~~
 
-Read the Docs gives you a number of additional features.
-
-* You can add Versions to your project for each tag & branch.
-* You can alerts for when your doc build fails
-* You can search across the full set of docs
-
-Let's see what that looks like in practice.
 
 Extra Credit
 ************

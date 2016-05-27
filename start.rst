@@ -197,7 +197,7 @@ Understanding ``conf.py``
 Sphinx is quite configurable,
 which can be a bit overwhelming.
 However, 
-the ``conf.py`` file is quite well docuemnted.
+the ``conf.py`` file is quite well documented.
 You can read through it and get some ideas about what all it can do.
 
 A few of the more useful settings are:

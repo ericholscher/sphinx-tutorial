@@ -32,7 +32,7 @@ Sphinx also supports ``:doc:`docname``` for linking to a document.
 Semantic Descriptions and References
 ------------------------------------
 
-Sphinx also has much more powerful semantic referencing capabilties,
+Sphinx also has much more powerful semantic referencing capabilities,
 which knows all about software development concepts.
 
 Say you're creating a CLI application. 
@@ -50,11 +50,11 @@ That can also be referenced quite simply:
 
    :option:`-i`
 
-Sphinx includes a large number of these semantic types:
+Sphinx includes a large number of these semantic types, including:
 
-* Module
-* Class
-* Method
+* :rst:dir:`Module <py:module>`
+* :rst:dir:`Class <py:class>`
+* :rst:dir:`Method <py:method>`
 
 External References
 -------------------
@@ -195,7 +195,7 @@ so go ahead and put that in this setting.
 Try it out
 ~~~~~~~~~~
 
-Now go ahead and rengerate your docs and look at the magic that happened::
+Now go ahead and regenerate your docs and look at the magic that happened::
 
 	make html
 
