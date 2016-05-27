@@ -1,5 +1,5 @@
-Getting Started: Overview & Introduction to Concepts
-====================================================
+Getting Started: Overview & Installing Initial Project
+======================================================
 
 Concepts
 ********

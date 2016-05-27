@@ -14,8 +14,8 @@ Please provide feedback to `@ericholscher`_.
 Schedule
 --------
 
-* 9-9:20 Introduction to the Tutorial
-* 9:20-9:50 :doc:`start`
+* 9-9:30 Introduction to the Tutorial
+* 9:30-9:50 :doc:`start`
 * 9:50-10:20 :doc:`step-1`
 * 10:20-10:40 *Break*
 * 10:40-11:10 :doc:`step-2`
