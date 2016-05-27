@@ -49,7 +49,7 @@ It contains the example code that we will be documenting.
 
 You can clone it here::
 
-    git clone https://github.com/ericholscher/djangocon-sphinx-tutorial
+    git clone https://github.com/ericholscher/pycon-sphinx-tutorial
 
 
 Getting Started
