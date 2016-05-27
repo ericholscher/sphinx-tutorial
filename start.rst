@@ -154,10 +154,23 @@ Custom Theme
 ------------
 
 You'll notice your docs look a bit different than mine.
-You can change this by setting the ``html_theme`` setting in your ``conf.py``.
-Go ahead and set it like this::
+
+First,
+you need to install the theme:
+
+.. code:: bash
+
+    $ pip install sphinx_rtd_theme
+
+Then you need to update a few settings in your ``conf.py``.
+
+.. code:: python
+
+    import sphinx_rtd_theme
 
     html_theme = 'sphinx_rtd_theme'
+
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 If you rebuild your documentation,
 you will see the new theme::
