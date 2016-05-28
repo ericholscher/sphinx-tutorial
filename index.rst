@@ -22,6 +22,8 @@ Schedule
 * 11:10-11:40 :doc:`step-3`
 * 11:40-12:20 :doc:`finish`
 
+Thanks for coming
+
 .. toctree::
    :maxdepth: 2
    :caption: Tutorial
