@@ -1,6 +1,8 @@
 Step 2: Building References & API docs
 ======================================
 
+.. note:: Finish at 11:15
+
 Concepts
 ********
 
@@ -168,6 +170,21 @@ We'll go ahead and create an ``api.rst`` that will hold our API reference:
 
 Remember, you'll need to use the  ``.. autoclass::`` directive to pull in your source code.
 This will render the docstrings of your Python code nicely.
+
+Requirements
+------------
+
+In order to build your code,
+it needs to be able to import it.
+This means it needs all of the required Python modules you import in the code.
+
+You can add a ``requirements.txt`` to the top-level of your project:
+
+.. literalinclude:: requirements.txt
+
+Then do::
+
+  pip install -r requirements.txt
 
 Tell Sphinx about your code
 ---------------------------
