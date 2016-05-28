@@ -142,6 +142,9 @@ You can also view it by running a web server in that directory::
     # Inside docs/_build/html directory.
     python -m SimpleHTTPServer
 
+    # For python 3
+    python3 -m http.server
+
 Then open your browser to http://localhost:8000.
 
 This should display a rendered HTML page that says **Welcome to Crawler’s documentation!** at the top.
