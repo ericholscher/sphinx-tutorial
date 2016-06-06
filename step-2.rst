@@ -178,13 +178,16 @@ In order to build your code,
 it needs to be able to import it.
 This means it needs all of the required Python modules you import in the code.
 
-You can add a ``requirements.txt`` to the top-level of your project:
+If you have third party dependencies,
+that means that you have to have them installed in your Python environment.
+Luckily,
+for most cases you can actually mock these variables using `autodoc_mock_imports <http://www.sphinx-doc.org/en/stable/ext/autodoc.html#confval-autodoc_mock_imports>`_.
 
-.. literalinclude:: requirements.txt
+In your ``conf.py`` go ahead and add:
 
-Then do::
+    autodoc_mock_imports = ['bs4', 'requests']
 
-  pip install -r requirements.txt
+This will allow your docs to import the example code without requiring those modules be installed.
 
 Tell Sphinx about your code
 ---------------------------

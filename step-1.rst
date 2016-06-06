@@ -160,9 +160,6 @@ on the same level as ``index.rst``, properly marked up:
 .. note::
    Live Preview: :doc:`crawler/docs/step1/install`
 
-You can now open the ``support.html`` file directly,
-but it isn't showing on the navigation..
-
 Create Support page
 -------------------
 
@@ -177,6 +174,9 @@ Go ahead and put this in your ``support.rst``, but add the proper RST markup:
 
 .. note::
    Live Preview: :doc:`crawler/docs/step1/support`
+
+You can now open the ``support.html`` file directly,
+but it isn't showing on the navigation..
 
 Add TocTree
 -----------

@@ -135,6 +135,7 @@ At the end, it should say something about the documents being ready in
 ``_build/html``.
 You can now open them in your browser by typing::
 
+    # On OS X
     open _build/html/index.html
 
 You can also view it by running a web server in that directory::
